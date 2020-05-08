@@ -237,7 +237,7 @@ html {
 }
  .marquee p {
     position: absolute;
-    white-space: wrap;
+    white-space: nowrap;
     width: 100%;
     height: 100%;
     line-height: 1.8em;
@@ -254,9 +254,41 @@ html {
         transform: translateX(100%);
     }
     100% {
-        transform: translateX(-500%);
+        transform: translateX(-450%);
     }
 }
+media only screen and (max-width:600px) {
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-1300%);
+        }
+    }
+}
+/* @media only screen and (min-width:600px) {
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-1300%);
+        }
+    }
+} */
+/* @media only screen and (min-width:768px) {
+ 
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-750%);
+        }
+    }
+} */
+
 .details>a {
     text-decoration: none;
     color: blue;
@@ -371,7 +403,7 @@ a~h6 {
     margin-top: 8px;
     overflow: hidden;
     position: relative;
-    border: 1px solid #427900;
+/*     border: 1px solid #427900; */
     /* background-color: #316dc3; */
     color:black;
     /* margin: 10px 40px; */
